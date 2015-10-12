@@ -58,7 +58,7 @@ install_npm() {
       echo "npm `npm --version` already installed with node"
     else
       echo "Downloading and installing npm $version (replacing version `npm --version`)..."
-      npm install --unsafe-perm --quiet -g npm@$version 2>&1 >/dev/null
+      npm install --unsafe-perm --quiet --ignore-scripts -g npm@$version 2>&1 >/dev/null
     fi
   fi
 }
